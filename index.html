@@ -1,51 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Webpage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f2f2f2;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #666;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>小幻熊</title>  
+    <style>  
+        body {  
+            margin: 0;  
+            padding: 0;  
+            font-family: Arial, sans-serif;  
+            <!-- background-image: url('bg.jpeg'); /* 替换为你的背景图URL */  -->
+            background-size: contain;  
+            background-attachment: auto;  
+            background-position: center;  
+            background-repeat: no-repeat;  
+            background-color: blanchedalmond;
+        
+            color: white;  
+            overflow-y: auto; /* 添加垂直滚动条 */  
+        }  
+        .container {  
+            padding: 20px;  
+            background: rgba(80, 76, 76, 0.5); /* 半透明背景以便看清背景图 */
+            border-radius: 10px;  
+            max-width: 1000px;
+            margin: auto;  
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  
 
-    <h1>Welcome to My Simple Webpage</h1>
 
-    <p>This is a basic webpage built with HTML and CSS. You can add more content, images, and links to expand it. Feel free to customize the style as you like!</p>
+        }  
+        .header {  
+            text-align: center;  
+            margin-bottom: 20px;  
+        }  
+        .header img {  
+            width: 100px;  
+            height: 100px;  
+            border-radius: 50%;  
+            margin-bottom: 10px;  
+        }  
+        .header h1 {  
+            margin: 0;  
+        }  
+        section {  
+            margin: 20px;  
+        }  
+        .charts {  
+            display: flex;  
+            flex-wrap: wrap;  
+            justify-content: space-between;  
+        }  
+        .chart-item {  
+            width: calc(50% - 20px); /* 每张图片占据三分之一的宽度，减去左右间距 */
+            margin: 10px;  
+            text-align: center;  
+        }  
+        .chart-title {  
+            margin-bottom: 10px;  
+            font-weight: bold;  
+        }  
+        .chart-img {  
+            max-width: 100%;  
+            height: auto;  
+        }  
+        .section h2 {  
+            margin-top: 0;  
+        }  
+        .charts img {  
+            width: 100%;  
+            height: auto;  
+            display: block;  
+            margin: 0 auto;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+        <div class="header">  
+            <img src="study.png" alt="团队图标"> <!-- 替换为你的图标URL -->  
+            <h1>小幻熊队</h1>  
+        </div>  
+          
+        <div class="section" id="team-introduction">  
+            <h2>团队介绍</h2>  
+            <p></p>
+            <p>&emsp;&emsp;小幻熊队，由一群热爱学习、热爱互联网的学生组成，我们希望通过我们的努力，帮助更多的学生享受到线上学习的便利。</p>  
+            <p>&emsp;&emsp;团队成员包括：蒋全盛，苗泽坤，石乙坤，张坤（以上排名不分先后）。</p>  
+        </div>  
+          
+        <div class="section" id="task-introduction">  
+            <h2>任务介绍</h2>  
+            <p>&emsp;&emsp;随着互联网技术的飞速发展和全球教育资源的日益丰富，传统教育模式正逐步向线上线下融合的新型教育模式转变。智慧在线学习平台应运而生，旨在打破地域、时间限制，为学习者提供便捷、高效、个性化的学习体验，满足不同年龄层、不同职业背景人群的学习需求。</p>
+            <p></p>  
+        </div>  
+          
+        <div class="section" id="interview-report">  
+            <h2>访谈报告</h2>  
+            <p>这里是访谈的详细报告，包括访谈对象、问题和回答等。</p>
 
-    <h2>About Me</h2>
-    <p>I am an aspiring web developer interested in learning new technologies and improving my coding skills.</p>
+            <h4>您平时喜欢从哪些渠道获取信息或者学习新知识？</h4>
+            <p>&emsp;&emsp;我通常通过网上课程、编程论坛、视频网站和开源项目学习，最近对人工智能和网络安全网络安全特别感兴趣。</p>
 
-    <h2>My Favorite Picture</h2>
-    <img src="https://via.placeholder.com/600x400" alt="A beautiful landscape">
+            <h4>学习习惯与偏好</h4>
+            <p>&emsp;&emsp;受访者普遍通过在线视频课程、技术博客、社交媒体以及编程论坛获取信息。他们对人工智能、网络安全、数据科学和区块链等领域表现出强烈的兴趣。常用的中文平台如慕课网、网易云课堂以及B站被频繁提及，受访者认为这些平台提供了丰富的课程资源。同时，GitHub被视为重要的资源库，学生们通过参与开源项目和查阅代码来加深理解，特别是在实际应用中的实践。</p>
 
-    <h2>Useful Links</h2>
-    <p>Visit <a href="https://www.example.com" target="_blank">Example.com</a> for more interesting content!</p>
+            <h4>学习需求与挑战</h4>
+            <p>&emsp;&emsp;受访者通常在晚上和周末进行学习，发现这些时间段的效率最高。大多数人会制定详细的学习计划，利用Notion、Todoist和Google Calendar等工具进行进度跟踪。学习方式上，他们偏好视频教程和实际项目实践，认为这些方法能帮助他们更好地掌握复杂概念。此外，互动学习也是受访者的一大偏好，他们希望在学习过程中能够与同伴和导师进行实时讨论，认为这种交流有助于解决疑惑。</p>
 
-</body>
+            <h4>付费意愿</h4>
+            <p>&emsp;&emsp;在谈到对在线学习资源的付费意愿时，大多数受访者愿意为高质量内容付费，接受的价格范围在50至200元/月。他们认为，如果课程内容能够提供实战经验、行业认可的证书或专项技能的提升，付费的意愿会进一步增加。</p>
+
+            <h4>用户体验与反馈</h4>
+            <p>&emsp;&emsp;受访者对在线学习平台的整体体验普遍积极，特别看重课程的实用性、深度和互动性。许多人提到，个性化推荐和实时问答功能显著提高了他们的学习效果，他们希望这些功能能更好地满足个人学习需求。同时，受访者建议平台增加行业专家的讲座、案例分析以及职业发展相关的课程，以增强学习体验，使学习内容更加贴近实际应用。</p>
+
+            <h4>推荐意愿</h4>
+            <p>&emsp;&emsp;大多数受访者表示，如果平台能够有效满足他们的学习需求，他们会积极向同学和朋友推荐，尤其是对那些也在学习计算机相关课程的同学。他们相信，一个能够提供系统性学习、良好用户体验及丰富资源的平台，必将吸引更多学生的关注，促进他们的学习成长。</p>
+        </div>  
+          
+        <div class="section" id="data-analysis">  
+            <h2>数据分析图表</h2>  
+            <div class="charts">  
+                <div class="chart-item">  
+                    <div class="chart-title">图表1标题</div>  
+                    <img src="./图片1.png" alt="图表1" class="chart-img">
+                </div>  
+                <div class="chart-item">  
+                    <div class="chart-title">图表2标题</div>  
+                    <img src="./图片2.png" alt="图表2" class="chart-img">
+                </div>  
+                <div class="chart-item">  
+                    <div class="chart-title">图表3标题</div>  
+                    <img src="./图片3.png" alt="图表3" class="chart-img">
+                </div>  
+                <div class="chart-item">  
+                    <div class="chart-title">图表4标题</div>  
+                    <img src="./图片4.png" alt="图表4" class="chart-img">
+                </div>  
+                <div class="chart-item">  
+                    <div class="chart-title">图表5标题</div>  
+                    <img src="./图片5.png" alt="图表5" class="chart-img">
+                </div>  
+                <div class="chart-item">  
+                    <div class="chart-title">图表6标题</div>  
+                    <img src="./图片6.png" alt="图表6" class="chart-img">
+                </div>  
+            </div>  
+        </div>  
+    </div>  
+</body>  
 </html>
